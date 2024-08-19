@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Holiday</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" onclick="playAudio()">
+        <h1>Happy Holiday</h1>
+        <div class="kids-background"></div>
+    </div>
+    <audio id="HoyaHoye" src="HoyaHoye.mp3"></audio>
+
+    <!-- Easter Egg Section -->
+    <div class="easter-egg" id="easterEgg">
+        <h2>You found Your MULMUL 🎉</h2>
+        <p>DM @firaflash on telegram " BUHE " to claim the 20 BIRR CARD </p>
+    </div>
+
+    <script>
+        function playAudio() {
+            var audio = document.getElementById('HoyaHoye');
+            audio.play();
+
+            // Show Easter Egg after 48 seconds
+            setTimeout(showEasterEgg, 48000);
+        }
+
+        function showEasterEgg() {
+            var easterEgg = document.getElementById('easterEgg');
+            easterEgg.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
